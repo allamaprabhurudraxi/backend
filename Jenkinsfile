@@ -3,6 +3,6 @@ node('master'){
                   git 'https://github.com/ajitesh17/INGPRODUCTS'
               }
    stage('java build'){
-             sh 'mvn sonar:sonar -Dsonar.password=admin -Dsonar.login=admin'
+             sh 'mvn clean install sonar:sonar -Dsonar.password=admin -Dsonar.login=admin'
          }
 }
